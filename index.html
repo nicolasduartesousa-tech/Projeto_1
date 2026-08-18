@@ -5,19 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Basquete pra vida</title>
         <style>
-            header{
-              background-color: #8D9EE0; 
-              color: #000000;
-              
-;
-              text-align: center;
-              max-width: 800px;
-              margin: 0 auto;
+            header {
+                background-color: #8D9EE0; 
+                color: #000000;
+                text-align: center;
+                max-width: 800px;
+                margin: 0 auto;
             }
 
             main {
-
-                background-color: #ffff;
+                background-color: #ffffff;
                 color: #000000;
                 text-align: center;
                 max-width: 800px;
@@ -27,27 +24,31 @@
                 justify-content: center;
                 gap: 20px;
             }
-            img{
+
+            img {
                 width: 80px;
                 height: 80px;
             }
 
+            /* ERRO 1: Faltou fechar a chave "}" do seletor da section */
             section {
-            max-width: 800px;
-            margin: 20px auto;
+                max-width: 800px;
+                margin: 20px auto;
                 background-color: #f4f4f4;
                 padding: 15px;
-           }
+
             .titulo-secao {
                 color: #8D9EE0;
                 border-bottom: 2px solid #000000;
             }
 
+            /* ERRO 2: Seletor com ponto (.regras) no CSS, mas no HTML foi usado id="regras" */
             .regras-lista {
                 text-align: left;
                 font-size: 16px;
             }
 
+            /* ERRO 3: Faltou o ponto e vírgula no final da linha */
             footer {
                 background-color: #8D9EE0;
                 text-align: center
@@ -61,20 +62,41 @@
     <body>
 
         <header>
-
             <h1>Basquete for life</h1>
             <p>Entenda sobre basquete e mergulhe em uma experiência única</p>
-
         </header>
-            <main>
-                <img src="imagem do meu site.png" alt="Ícone em pixel art de uma bola de basquete laranja sobre fundo azul.">
-                <div>
-                    <h2>Boas vindas</h2>
-                    <h2></h2>
-                    <p>Feito por: Nicolas Klaus.</p>
-                    <p>Seja bem-vindo ao site que vai te fazer amar o basquete!</p>
 
-                </div>
-            </main>
+        <main>
+            <img src="imagem do meu site.png" alt="Ícone em pixel art de uma bola de basquete laranja sobre fundo azul.">
+            <div>
+                <h2>Boas vindas</h2>
+                <p>Feito por: Nicolas Klaus.</p>
+                <p>Seja bem-vindo ao site que vai te fazer amar o basquete!</p>
+            </div>
+        </main>
+
+        <section>
+            <h2 class="titulo-secao">História do Basquete</h2>
+            <p>O basquetebol foi criado em 1891 pelo professor de educação física canadense James Naismith, na Associação Cristã de Moços de Springfield, Massachusetts, EUA. Ele precisava de um jogo que os alunos pudessem jogar em local fechado durante o inverno rigoroso.</p>
+        </section>
+
+        <section>
+            <h2 class="titulo-secao">Regras Básicas</h2>
+            <ul id="regras-lista">
+                <li>O jogo é disputado entre duas equipes de 5 jogadores cada.</li>
+                <li>Não é permitido andar ou correr com a bola na mão sem quicá-la (driblar).</li>
+                <li>As cestas podem valer 1 ponto (lance livre), 2 pontos ou 3 pontos (atrás da linha de fora).</li>
+                <li>Cada partida regulamentar dura 40 minutos (dividida em 4 tempos de 10 min).</li>
+            </list>
+        </section>
+
+        <section>
+            <h2 class="titulo-secao">Principais Posições</h2>
+            <p>Em uma equipe tradicional temos: <b>Armador</b> (organiza o jogo), <b>Alas</b> (jogam pelas laterais) e <b>Pivô</b> (joga perto da cesta e pega os rebotes).</p>
+        </section>
+
+        <footer>
+        </footer>
+
     </body>
 </html>
