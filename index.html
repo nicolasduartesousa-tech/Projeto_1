@@ -17,19 +17,27 @@
             main {
                 background-color: #ffffff;
                 color: #000000;
-                text-align: center;
+                text-align: left; /* Texto alinhado à esquerda como na referência */
                 max-width: 800px;
                 margin: 0 auto;
+                padding: 20px 15px;
+            }
+
+            /* Container que coloca a imagem do lado do título */
+            .cabecalho-post {
                 display: flex;
                 align-items: center;
-                justify-content: center;
-                gap: 20px;
-                padding: 20px 0;
+                gap: 15px;
+                margin-bottom: 5px;
+            }
+
+            .cabecalho-post h2 {
+                margin: 0;
             }
 
             img {
-                width: 80px;
-                height: 80px;
+                width: 60px;
+                height: 60px;
             }
 
             section {
@@ -57,14 +65,10 @@
                 margin-top: 10px;
             }
 
-            /* --- MÁGICA DO CSS SEM JAVASCRIPT --- */
-
-            /* Esconde as caixinhas de seleção reais */
             .voto-check {
                 display: none;
             }
 
-            /* Transforma o <label> no botão visual */
             .btn-voto {
                 background-color: #f0f0f0;
                 color: black;
@@ -90,12 +94,10 @@
                 border-color: #bbb;
             }
 
-            /* Exibe "0" quando o checkbox NÃO estiver marcado */
             .voto-check:not(:checked) + .btn-voto .contador::before {
                 content: "0";
             }
 
-            /* Exibe "1" e muda a cor quando o checkbox ESTIVER marcado */
             .voto-check:checked + .btn-voto .contador::before {
                 content: "1";
             }
@@ -123,12 +125,12 @@
         </header>
 
         <main>
-            <img src="imagem do meu site.png" alt="Ícone em pixel art de uma bola de basquete laranja sobre fundo azul.">
-            <div>
+            <div class="cabecalho-post">
+                <img src="imagem do meu site.png" alt="Ícone em pixel art de uma bola de basquete laranja sobre fundo azul.">
                 <h2>Boas vindas</h2>
-                <p>Feito por: Nicolas Klaus.</p>
-                <p>Seja bem-vindo ao site que vai te fazer amar o basquete!</p>
             </div>
+            <p><b>Por:</b> Nicolas Klaus</p>
+            <p>Seja bem-vindo ao site que vai te fazer amar o basquete!</p>
         </main>
 
         <section>
