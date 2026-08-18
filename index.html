@@ -49,44 +49,61 @@
                 padding: 0;
                 text-align: left;
             }
-            
+
             .botoes-container {
                 display: flex;
-                gap: 8px; 
-                justify-content: center; 
+                gap: 8px;
+                justify-content: center;
                 margin-top: 10px;
             }
 
-            button {
-                background-color: #f0f0f0; 
+            /* --- MÁGICA DO CSS SEM JAVASCRIPT --- */
+
+            /* Esconde as caixinhas de seleção reais */
+            .voto-check {
+                display: none;
+            }
+
+            /* Transforma o <label> no botão visual */
+            .btn-voto {
+                background-color: #f0f0f0;
                 color: black;
-                border: 1px solid #ccc; 
-                padding: 4px 10px; /
-                margin: 0; 
+                border: 1px solid #ccc;
+                padding: 4px 10px;
+                margin: 0;
                 font-weight: bold;
-                font-size: 14px; 
-                border-radius: 4px; 
+                font-size: 14px;
+                border-radius: 4px;
                 cursor: pointer;
                 display: flex;
                 align-items: center;
-                gap: 4px; 
+                gap: 4px;
+                user-select: none;
             }
 
-            button span {
+            .btn-voto span {
                 font-size: 16px;
             }
 
-
-            button:hover {
+            .btn-voto:hover {
                 background-color: #e0e0e0;
                 border-color: #bbb;
             }
 
-            button:active {
-                background-color: #add8e6;
-                transform: translateY(1px); 
+            /* Exibe "0" quando o checkbox NÃO estiver marcado */
+            .voto-check:not(:checked) + .btn-voto .contador::before {
+                content: "0";
             }
-            
+
+            /* Exibe "1" e muda a cor quando o checkbox ESTIVER marcado */
+            .voto-check:checked + .btn-voto .contador::before {
+                content: "1";
+            }
+
+            .voto-check:checked + .btn-voto {
+                background-color: #add8e6;
+                border-color: #70b0cc;
+            }
 
             footer {
                 background-color: #8D9EE0;
@@ -119,8 +136,11 @@
             <p>O basquetebol foi criado em 1891 pelo professor de educação física canadense James Naismith, na Associação Cristã de Moços de Springfield, Massachusetts, EUA. Ele precisava de um jogo que os alunos pudessem jogar em local fechado durante o inverno rigoroso.</p>
             
             <div class="botoes-container">
-                <button><span>❤️</span> 1</button>
-                <button><span>👎</span> 1</button>
+                <input type="checkbox" id="like-historia" class="voto-check">
+                <label for="like-historia" class="btn-voto"><span>❤️</span> <span class="contador"></span></label>
+
+                <input type="checkbox" id="deslike-historia" class="voto-check">
+                <label for="deslike-historia" class="btn-voto"><span>👎</span> <span class="contador"></span></label>
             </div>
         </section>
 
@@ -134,8 +154,11 @@
             </ul>
             
             <div class="botoes-container">
-                <button><span>❤️</span> 1</button>
-                <button><span>👎</span> 1</button>
+                <input type="checkbox" id="like-regras" class="voto-check">
+                <label for="like-regras" class="btn-voto"><span>❤️</span> <span class="contador"></span></label>
+
+                <input type="checkbox" id="deslike-regras" class="voto-check">
+                <label for="deslike-regras" class="btn-voto"><span>👎</span> <span class="contador"></span></label>
             </div>
         </section>
 
@@ -144,8 +167,11 @@
             <p>Em uma equipe tradicional temos: <b>Armador</b> (organiza o jogo), <b>Alas</b> (jogam pelas laterais) e <b>Pivô</b> (joga perto da cesta e pega os rebotes).</p>
             
             <div class="botoes-container">
-                <button><span>❤️</span> 1</button>
-                <button><span>👎</span> 1</button>
+                <input type="checkbox" id="like-posicoes" class="voto-check">
+                <label for="like-posicoes" class="btn-voto"><span>❤️</span> <span class="contador"></span></label>
+
+                <input type="checkbox" id="deslike-posicoes" class="voto-check">
+                <label for="deslike-posicoes" class="btn-voto"><span>👎</span> <span class="contador"></span></label>
             </div>
         </section>
 
