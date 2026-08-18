@@ -49,21 +49,44 @@
                 padding: 0;
                 text-align: left;
             }
+            
+            .botoes-container {
+                display: flex;
+                gap: 8px; 
+                justify-content: center; 
+                margin-top: 10px;
+            }
 
             button {
-                background-color: #8D9EE0;
+                background-color: #f0f0f0; 
                 color: black;
-                border: 1px solid black;
-                padding: 5px 15px;
-                margin: 10px 5px 0 5px;
+                border: 1px solid #ccc; 
+                padding: 4px 10px; /
+                margin: 0; 
                 font-weight: bold;
+                font-size: 14px; 
+                border-radius: 4px; 
                 cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 4px; 
+            }
+
+            button span {
+                font-size: 16px;
+            }
+
+
+            button:hover {
+                background-color: #e0e0e0;
+                border-color: #bbb;
             }
 
             button:active {
                 background-color: #add8e6;
-                transform: translateY(2px);
+                transform: translateY(1px); 
             }
+            
 
             footer {
                 background-color: #8D9EE0;
@@ -95,8 +118,10 @@
             <h2 class="titulo-secao">História do Basquete</h2>
             <p>O basquetebol foi criado em 1891 pelo professor de educação física canadense James Naismith, na Associação Cristã de Moços de Springfield, Massachusetts, EUA. Ele precisava de um jogo que os alunos pudessem jogar em local fechado durante o inverno rigoroso.</p>
             
-            <button>👍 Like</button>
-            <button>👎 Deslike</button>
+            <div class="botoes-container">
+                <button><span>❤️</span> 1</button>
+                <button><span>👎</span> 1</button>
+            </div>
         </section>
 
         <section>
@@ -108,19 +133,24 @@
                 <li>Cada partida regulamentar dura 40 minutos (dividida em 4 tempos de 10 min).</li>
             </ul>
             
-            <button>👍 Like</button>
-            <button>👎 Deslike</button>
+            <div class="botoes-container">
+                <button><span>❤️</span> 1</button>
+                <button><span>👎</span> 1</button>
+            </div>
         </section>
 
         <section>
             <h2 class="titulo-secao">Principais Posições</h2>
             <p>Em uma equipe tradicional temos: <b>Armador</b> (organiza o jogo), <b>Alas</b> (jogam pelas laterais) e <b>Pivô</b> (joga perto da cesta e pega os rebotes).</p>
             
-            <button>👍 Like</button>
-            <button>👎 Deslike</button>
+            <div class="botoes-container">
+                <button><span>❤️</span> 1</button>
+                <button><span>👎</span> 1</button>
+            </div>
         </section>
 
         <footer>
+            <p>Site desenvolvido por Nicolas Klaus - Primeiro Ano do Ensino Médio</p>
         </footer>
 
     </body>
